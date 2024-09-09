@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+
+
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.green {
+    color: #028f7a;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #424141;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: green;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.text-content h1 {
+    font-size: 36px;
+    color: #028f7a;
+    font-family: 'Poppins';
+}
+
+.text-content p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+}
+.order-btn {
+    margin-top: 20px;
+    background-color: #028f7a; /* اللون الأخضر للزر */
+    color: #fff; /* لون النص الأبيض */
+    padding: 15px 30px; /* الحشوة الداخلية */
+    font-size: 15px; /* حجم الخط */
+    border: none; /* إزالة الحدود */
+    border-radius: 5px; /* زوايا مستديرة */
+    cursor: pointer; /* تغيير شكل المؤشر عند الوقوف على الزر */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* تأثير الانتقال لجعل التفاعل سلسًا */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للزر */
+}
+
+.order-btn:hover {
+    background-color: #026d60; /* لون مختلف عند التمرير بالفأرة */
+    transform: scale(1.05); /* تكبير الزر عند التمرير */
+}
+
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.image-content img {
+    width: 650px; /* العرض الثابت للصورة الرئيسية */
+    height: 350px; /* الارتفاع الثابت للصورة الرئيسية */
+    border-radius: 10px;
+    object-fit: cover; /* يحافظ على نسبة الأبعاد مع ملء الحاوية */
+}
+
+
+.thumbnail-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.thumbnails {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.thumbnails img {
+    width: 150px;  /* العرض الثابت للصور المصغرة */
+    height: 75px;  /* الارتفاع الثابت للصور المصغرة */
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.3s;
+    object-fit: cover; /* يحافظ على نسبة الأبعاد مع ملء الحاوية */
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+    border-color: #028f7a;
+}
+.products {
+    height: 100vh;
+    display: flex;
+    align-items: center; /* لتوسيط المحتوى عموديًا */
+    justify-content: center; /* لتوسيط المحتوى أفقيًا */
+    max-width: 100%;
+    margin: 0; /* إزالة الهوامش لتجنب التداخل مع ارتفاع الشاشة الكامل */
+    padding: 20px; /* إضافة حشوة لتفادي تلاصق المحتوى مع الحواف */
+    background-color: #fff; /* خلفية بيضاء للمنتج */
+    color: #fff; /* لون النص الأبيض */
+}
+
+.products h1 {
+    font-size: 36px;
+    color: #028f7a; /* لون النص الأخضر */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    width: 100%; /* عرض كامل */
+    max-width: 1200px; /* تحديد أقصى عرض */
+    overflow: hidden; /* منع تجاوز الصورة والنص */
+}
+
+.product-image {
+    width: 60%; /* زيادة حجم الصورة قليلاً */
+    border-radius: 10px 0 0 10px; /* زوايا دائرية للجانب الأيسر */
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product-description {
+    width: 45%; /* تقليص عرض النصوص ليتناسب مع حجم الصورة الجديد */
+    padding: 20px;
+}
+
+.product-description h2 {
+    font-size: 28px;
+    color: #028f7a; /* لون النص الأخضر */
+    margin-bottom: 20px;
+}
+
+.product-description p {
+    font-size: 16px;
+    color: #555; /* لون النص الداكن */
+    margin-bottom: 20px;
+}
+
+.price {
+    display: block;
+    font-size: 24px;
+    color: #028f7a; /* لون السعر الأخضر */
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #028f7a;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #026d60;
+    transform: scale(1.05);
+}
+.order {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 40px auto;
+}
+
+.order-content {
+    display: flex;
+    flex-direction: column; /* جعل العناصر عمودية */
+    width: 100%;
+    max-width: 800px; /* تقليل العرض الأقصى لتجنب عرض كبير جدًا */
+    margin: 0 auto;
+}
+
+.order-text {
+    text-align: center;
+    margin-bottom: 20px; /* مسافة تحت النص */
+}
+
+.order-text h1 {
+    font-size: 36px;
+    color: #028f7a; /* لون النص الأخضر */
+    margin-bottom: 10px;
+}
+
+.order-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.order-form {
+    padding: 20px;
+    background-color: #028f7a; /* خلفية النموذج */
+    color: #fff; /* لون النص الأبيض */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    width: 800px; /* تحديد أقصى عرض للنموذج */
+    height: 600px;
+    margin: 0 auto; /* توسيط النموذج */
+}
+
+.order-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.order-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.order-form input, 
+.order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.order-form textarea {
+    height: 100px; /* تحديد ارتفاع أكبر للـ textarea */
+}
+
+.order-form button {
+    background-color: #fff;
+    color: #028f7a;
+    border: none;
+    padding: 12px 20px; /* تقليل حجم الحشو */
+    font-size: 16px; /* تقليل حجم الخط */
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-form button:hover {
+    background-color: #026d60;
+    color: #fff;
+    transform: scale(1.05);
+}
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .text-content {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .image-content {
+        flex: 1;
+    }
+
+    .products .product {
+        flex-direction: row;
+    }
+
+    .product-description {
+        text-align: left;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        padding: 40px;
+    }
+
+    .main-content h1 {
+        font-size: 36px;
+    }
+
+    .product-description h2 {
+        font-size: 28px;
+    }
+
+    .product-description p {
+        font-size: 18px;
+    }
+}
+@media (max-width: 767px) {
+    header {
+        flex-direction:row;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .text-content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .image-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .thumbnails {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .thumbnails img {
+        width: 80px;
+        height: 50px;
+    }
+
+    .products {
+        padding: 20px; /* إضافة حشوة لتوفير مساحة حول القسم */
+        background-color: #f9f9f9; /* تغيير لون الخلفية إلى لون فاتح لتحسين الرؤية */
+    }
+
+    .product {
+        flex-direction: column; /* جعل العناصر عمودية */
+        align-items: center; /* توسيط المحتوى */
+        margin-bottom: 20px; /* تقليل المسافة بين المنتجات */
+        opacity: 1; /* التأكد من ظهور المنتج بشكل كامل */
+        transform: none; /* إزالة تأثير التحويل */
+    }
+
+    .product-image {
+        width: 100%; /* جعل الصورة عرض كامل لتناسب الشاشة */
+        height: auto; /* الحفاظ على النسبة الأصلية للصورة */
+        border-radius: 10px; /* إضافة زوايا دائرية للصورة */
+    }
+
+    .product-description {
+        width: 100%; /* جعل النصوص عرض كامل */
+        padding: 15px; /* إضافة حشوة داخلية مناسبة */
+        text-align: center; /* توسيط النصوص */
+    }
+
+    .product-description h2 {
+        font-size: 24px; /* تقليل حجم الخط للعناوين */
+        margin-bottom: 10px; /* تقليل المسافة أسفل العنوان */
+    }
+
+    .product-description p {
+        font-size: 14px; /* تقليل حجم الخط للنصوص */
+        margin-bottom: 15px; /* تقليل المسافة أسفل النصوص */
+    }
+
+    .price {
+        font-size: 18px; /* تقليل حجم الخط للسعر */
+        margin-bottom: 10px; /* تقليل المسافة أسفل السعر */
+    }
+
+    .btn {
+        padding: 12px 20px; /* تقليل حجم الحشوة للزر */
+        font-size: 16px; /* تقليل حجم الخط للزر */
+    }
+        .order-form {
+            width: 100%; /* جعل العرض 100% ليتناسب مع عرض الشاشة */
+            height: auto; /* السماح للارتفاع بالتكيف مع المحتوى */
+            padding: 15px; /* تقليل الحشوة الداخلية */
+        }    
+        }

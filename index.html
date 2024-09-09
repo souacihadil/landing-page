@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Canapé Store </title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="green">C</span>anapéStore
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Product</a></li>
+                <li><a href="#order">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main-content">
+        <div class="text-content">
+            <h1>Welcome to Canapé Store</h1>
+            <p>Discover the best furniture for your living space. Our collection brings elegance and comfort to your home.</p>
+            <button class="order-btn">Order Now</button>
+        </div>
+        <div class="image-content">
+            <img src="images/1.png" alt="Main Image" id="main-image">
+        </div>
+    </section>
+
+    <section class="thumbnail-section">
+        <div class="thumbnails">
+            <img src="images/1.png" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(this)">
+            <img src="images/2.png" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(this)" >
+            <img src="images/3.png" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+            <img src="images/4.png" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+            <img src="images/5.png" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+
+        </div>
+    </section>
+    <section class="products" id="products">
+        
+        <div class="product">
+            <img src="images/6.png" alt="Luxury Sofa" class="product-image">
+            <div class="product-description">
+                <h2>CanapéStore</h2>
+                <p>Experience ultimate comfort with our Luxury Sofa. Designed to bring elegance and relaxation to your living space, this sofa features a high-quality fabric upholstery, plush cushions, and a modern design that fits perfectly into any decor. With its sturdy frame and durable construction, this sofa is not only stylish but built to last. Perfect for lounging or entertaining guests, it’s the centerpiece your living room deserves.</p>
+                <span class="price">$799.99</span>
+                <button class="btn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+    <section class="order" id="order">
+        <div class="order-content">
+            <div class="order-text">
+                <h1>Order Now!</h1>
+                <p>Get the best furniture delivered straight to your door. Don't miss out on our exclusive offers and premium quality products. Act now and transform your living space today!</p>
+            </div>
+            <div class="order-form">
+                <form action="#" method="post">
+                    <h2>Place Your Order</h2>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required></textarea>
+
+                    <label for="product">Product:</label>
+                    <input type="text" id="product" name="product" required>
+
+                    <button type="submit">Submit Order</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        
+        function changeImage(element) {
+    // الحصول على رابط الصورة من الصورة المصغرة
+    var newSrc = element.src;
+    
+    // تغيير الصورة الرئيسية
+    var mainImage = document.getElementById("main-image");
+    mainImage.src = newSrc;
+}
+window.addEventListener('load', () => {
+    const product = document.querySelector('.product');
+    product.style.opacity = 1;
+    product.style.transform = 'translateX(0)';
+});
+
+
+    </script>
+</body>
+</html>
