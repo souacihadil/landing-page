@@ -247,7 +247,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
     width: 800px; /* تحديد أقصى عرض للنموذج */
     height: 600px;
-    margin: 15px auto; /* توسيط النموذج */
+    margin: 15px auto 50px auto; /* توسيط النموذج */
 }
 
 .order-form h2 {
