@@ -6,9 +6,9 @@
 
 body {
     font-family: 'Poppins';
-     letter-spacing: 0.05em; /* مسافة بين الحروف */
-     word-spacing: 0.1em; /* مسافة بين الكلمات */
-     line-height: 1.6; /* مسافة بين الأسطر */
+     letter-spacing: 0.08em; /* مسافة بين الحروف */
+     word-spacing: 0.3em; /* مسافة بين الكلمات */
+     line-height: 2; /* مسافة بين الأسطر */
 
 
 }
