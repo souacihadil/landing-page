@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
      letter-spacing: 0.08em; /* مسافة بين الحروف */
      word-spacing: 0.3em; /* مسافة بين الكلمات */
      line-height: 3em; /* مسافة بين الأسطر */
