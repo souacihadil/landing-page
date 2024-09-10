@@ -8,7 +8,7 @@ body {
     font-family: 'Poppins';
      letter-spacing: 0.08em; /* مسافة بين الحروف */
      word-spacing: 0.3em; /* مسافة بين الكلمات */
-     line-height: 2; /* مسافة بين الأسطر */
+     line-height: 2em; /* مسافة بين الأسطر */
 
 
 }
