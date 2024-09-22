@@ -5,10 +5,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-     letter-spacing: 0.08em; /* مسافة بين الحروف */
-     word-spacing: 0.3em; /* مسافة بين الكلمات */
-     line-height: 3em; /* مسافة بين الأسطر */
+    font-family: 'Poppins';
 
 
 }
@@ -247,7 +244,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
     width: 800px; /* تحديد أقصى عرض للنموذج */
     height: 600px;
-    margin: 15px auto 50px auto; /* توسيط النموذج */
+    margin: 0 auto; /* توسيط النموذج */
 }
 
 .order-form h2 {
